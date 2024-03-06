@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>update user details here</h1>
+<form method="post" action="{% url 'user_update' %}">
+    {% csrf_token %}
+    {{form2.as_p}}
+    <button type="submit">UPDATE</button>
+</form>
+{{ redirect_to_user_login_immediately }}
+{% endblock %}

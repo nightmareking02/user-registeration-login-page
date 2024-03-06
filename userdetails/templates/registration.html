@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+
+    <div class="container">
+        <div class="jumbotron">
+            <div class="card card-body">
+            <br>
+            <br>
+            {% if registered %}
+                <h1>THANK YOU FOR REGISTERING</h1>
+            {% else %}
+                <h1>REGISTER HERE..!!</h1>
+                <form method="POST">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    {{form1.as_p}}
+                    <button type="submit">REGISTER</button>
+                </form>
+            {% endif %}
+        </div>
+    </div>
+    </div>
+
+{{ redirect_to_login_immediately }}
+{% endblock %}

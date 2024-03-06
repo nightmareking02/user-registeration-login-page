@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>welcome {{user.username}}</h1>
+<button type="submit"><a href="{% url 'user_update' %}">UPDATE</a></button>
+{{ redirect_to_login_immediately }}
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>USERDATA</h1>
+<div class="container">
+    <div class="jumbotronics">
+        <div class="col-md-6">
+            <h4>{{user.username}}</h4>
+            <h4>{{user.email}}</h4>
+            {% if user.is_authenticated  %}
+                    <h4>{{userdat.address}}</h4>
+                    <h4>{{userdat.phone}}</h4>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{{ redirect_to_login_immediately }}
+{% endblock %}
